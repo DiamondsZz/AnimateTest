@@ -16,11 +16,85 @@
       align-items: center;
       background-color: indianred;
     }
-    .rotate {
+    .rotate-box {
+      width: 450px;
+      height: 450px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateX 1s linear forwards;
+      animation-fill-mode: forwards;
+    }
+    .rotate-item1 {
+      position: absolute;
+      top: 90px;
+      left: 130px;
       width: 200px;
       height: 200px;
-      border: 20px solid goldenrod;
-      animation: rotate 2s infinite;
+      background-image: url("./imgs/2.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: rotate 3s infinite linear;
+    }
+    .rotate-item2 {
+      position: absolute;
+      top: 40px;
+      left: 70px;
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./imgs/3.png");
+      animation: rotate 3s infinite linear;
+    }
+    .rotate-item3 {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./imgs/4.png");
+      animation: rotate 3s infinite linear;
+    }
+    .rotate-other1 {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./imgs/1.png");
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      transform: translate3d(80px, 200px, 100px);
+    }
+    .rotate-other2 {
+      width: 160px;
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./imgs/1.png");
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      transform: translate3d(220px, 80px, 100px);
+    }
+    .rotate-other3 {
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./imgs/1.png");
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      transform: translate3d(120px, 100px, 100px);
     }
     @keyframes rotate {
       0% {
@@ -30,8 +104,23 @@
         transform: rotateZ(360deg);
       }
     }
+    @keyframes rotateX {
+      0% {
+        transform: rotateX(0deg);
+      }
+      100% {
+        transform: rotateX(40deg);
+      }
+    }
   </style>
   <body>
-    <div class="rotate"></div>
+    <div class="rotate-box">
+      <div class="rotate-item1"></div>
+      <div class="rotate-item2"></div>
+      <div class="rotate-item3"></div>
+      <div class="rotate-other1"></div>
+      <div class="rotate-other2"></div>
+      <div class="rotate-other3"></div>
+    </div>
   </body>
 </html>
