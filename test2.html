@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: indianred;
+    }
+    .circle {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #5cabff;
+      border-radius: 50%;
+      transform: skew(30deg);
+      animation: roll 10s linear infinite;
+    }
+    .ball {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      display: block;
+      background: black;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      background: radial-gradient(circle at 0px 100px, #5cabff, #000);
+      animation: rotate 1s linear infinite;
+      opacity: 0.5;
+      transition: all 1s;
+    }
+    .ball:hover {
+      opacity: 1;
+      -webkit-transform: scale(2, 2);
+      transform: scale(2, 2);
+    }
+
+    @keyframes roll {
+      0% {
+        transform: rotateZ(0deg);
+      }
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotateZ(0deg);
+      }
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="circle">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>

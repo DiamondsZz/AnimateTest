@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: indianred;
+    }
+
+    .scale {
+      width: 100px;
+      height: 100px;
+      margin-top: 400px;
+      background-color: aquamarine;
+      transition: all 2s;
+    }
+    .scale:hover {
+      transform: scale(2);
+    }
+
+    .expand-circle {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      border-top: 0;
+      border-bottom: 0;
+      animation: expand 10s infinite ease-out;
+      opacity: 0;
+    }
+    .expand-circle-delay-one {
+      animation-delay: 2s;
+    }
+    .expand-circle-delay-two {
+      animation-delay: 4s;
+    }
+    .expand-circle-delay-three {
+      animation-delay: 6s;
+    }
+
+    .translate-circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 20px solid lightseagreen;
+      animation: translateRight 4s infinite ease-in-out;
+      border-left: none;
+      border-bottom: none;
+      border-top: none;
+    }
+    @keyframes expand {
+      0% {
+        opacity: 0.4;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(4, 4);
+      }
+    }
+    @keyframes translateRight {
+      0% {
+        transform: translateX(0);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(400px);
+        opacity: 0.8;
+      }
+    }
+  </style>
+  <body>
+    <div class="expand-circle"></div>
+    <div class="expand-circle expand-circle-delay-one"></div>
+    <div class="expand-circle expand-circle-delay-two"></div>
+    <div class="expand-circle expand-circle-delay-three"></div>
+
+    <div class="scale"></div>
+
+    <div class="translate-circle"></div>
+  </body>
+</html>
