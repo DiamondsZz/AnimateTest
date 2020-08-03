@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+    }
+
+    .translate-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 20px solid lightseagreen;
+      animation: translateRight 2s infinite linear;
+      border-left: none;
+      border-bottom: none;
+      border-top: none;
+    }
+
+    @keyframes translateRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(800px);
+      }
+    }
+  </style>
+  <body>
+    <div class="translate-circle"></div>
+  </body>
+</html>
