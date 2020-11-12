@@ -1,4 +1,8 @@
-var camera, scene, renderer, geometry, material, mesh;
+var camera, //相机
+  scene, //场景
+  renderer, //渲染器
+  mesh, //网格
+  cubeSineDriver;
 
 init();
 animate();
@@ -24,15 +28,8 @@ function init() {
   );
   camera.position.z = 1000;
   scene.add(camera);
-  //几何体
-  geometry = new THREE.CubeGeometry(200, 200, 200);
-  //材质
-  material = new THREE.MeshLambertMaterial({
-    color: 0xaa6666,
-    wireframe: false,
-  });
-  mesh = new THREE.Mesh(geometry, material);
-  //scene.add( mesh );
+
+  mesh = new THREE.Mesh();
   cubeSineDriver = 0;
 
   textGeo = new THREE.PlaneGeometry(300, 300);
